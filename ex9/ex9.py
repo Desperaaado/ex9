@@ -32,17 +32,8 @@ def deal_expression(expression):
 
 def expression_sg(old_str, new_str, line):
     # replace old_str to new_str (support regular expression.)
-
-    re_old_str = re.compile(old_str)
-
-    if re.search(re_old_str, line):
-        # line_pieces = line.split(old_str)
-        # new_line =  new_str.join(line_pieces)
-        new_line = re.sub(re_old_str, new_str, line)
-    else:
-        new_line = line
-    
-    return new_line
+    pattern = re.compile(old_str)
+    return re.sub(pattern, new_str, line)
 
 def deal_content(content):
 
