@@ -53,9 +53,9 @@ def cook_lines(lines, cook_book):
         for line in lines:
             new_line = expression_sg(key_list[0], key_list[1], line)
             cooked_lines.append(new_line)
-    else:
-        print('sg function only.(for now)')
-        sys.exit(1)
+    else: 
+        print('sg function only.(for now)') 
+        sys.exit(1) 
 
     return cooked_lines
 
